@@ -4,9 +4,9 @@ on:
     branches:
       - master
 env:
-  AZURE_WEBAPP_NAME: github-actions-spa
-  AZURE_WEBAPP_PACKAGE_PATH: './dist/angulargithubaction'
-  NODE_VERSION: '10.x'
+  AZURE_WEBAPP_NAME: aplicacion-angular
+  AZURE_WEBAPP_PACKAGE_PATH: './dist/aplicacion-angular'
+  NODE_VERSION: '18.x'
 
 jobs:
   build-and-deploy:
