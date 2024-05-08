@@ -1,4 +1,7 @@
 {
+  "engines": {
+    "node": "18.14.x"
+  },
   "name": "angular-starter",
   "private": true,
   "scripts": {
