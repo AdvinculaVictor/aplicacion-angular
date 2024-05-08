@@ -65,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "storeappng:build:production"
+              "buildTarget": "storeappng:build:production"
             },
             "development": {
-              "browserTarget": "storeappng:build:development"
+              "buildTarget": "storeappng:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "aplicacion-angular:build"
+            "buildTarget": "aplicacion-angular:build"
           }
         },
         "test": {
@@ -100,7 +100,6 @@
       }
     }
   },
-  "defaultProject": "aplicacion-angular",
   "cli": {
     "analytics": false
   }
