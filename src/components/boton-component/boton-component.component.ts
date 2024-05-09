@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './boton-component.component.css'
 })
 export class BotonComponentComponent {
-
+  textoBoton = 'Presioname papi!';
 }
