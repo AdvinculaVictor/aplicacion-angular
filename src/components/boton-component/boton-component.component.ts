@@ -9,4 +9,8 @@ import { Component } from '@angular/core';
 })
 export class BotonComponentComponent {
   textoBoton = 'Presioname papi!';
+
+  myClick(){
+    alert('You clicked the button named "Presioname papi"');
+  }
 }
