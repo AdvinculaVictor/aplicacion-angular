@@ -1,0 +1,31 @@
+<h2>Registros obtenidos desde la API con Active Directory</h2>
+<hr>
+
+<select
+    #mySelect
+    (change)='cambiar(mySelect.value)'>
+   <option
+   *ngFor='let option of opciones'
+   [value]="option">{{option}}</option>
+</select>
+
+<hr>
+<div *ngIf="opcion=='productos'">
+<ul *ngFor="let item of data" >
+  <li >
+    {{item.descripcion}}
+  </li>
+  <li>{{item.marca}}</li>
+  <li>{{item.precio}}</li>
+  <li>{{item.stock}}</li>
+</ul>
+</div>
+<div *ngIf="opcion=='clientes'">
+  <ul  *ngFor="let item of data">
+    <li>
+      {{item.RazonSocial}}
+    </li>
+
+  </ul>
+</div>
+

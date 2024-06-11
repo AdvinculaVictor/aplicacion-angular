@@ -1,0 +1,8 @@
+Tenant ID:
+33444707-653e-4367-bb8b-1ed2685b6b7c
+
+Cliente Id Aplicación Angular AdvinculaApiClient
+8cdd5345-6e8b-49e7-a825-12117564ca6e
+
+Client Secret Aplicación Angular:
+fC48Q~aM3cwJAK7ObR~GTATE7NKdPsm1PEpMqabK

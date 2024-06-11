@@ -3,14 +3,11 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "storeappng": {
+    "AngularAdAPI": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "style": "css"
-        },
-        "@schematics/angular:application": {
-          "strict": true
+          "style": "scss"
         }
       },
       "root": "",
@@ -20,17 +17,20 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/aplicacion-angular",
+            "outputPath": "dist/angular-ad-api",
             "index": "src/index.html",
             "main": "src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
             "tsConfig": "tsconfig.app.json",
-            "inlineStyleLanguage": "css",
+            "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
-              "src/global_styles.css"
+              "src/styles.scss"
             ],
             "scripts": []
           },
@@ -39,8 +39,8 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "4mb",
-                  "maximumError": "5mb"
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
                 },
                 {
                   "type": "anyComponentStyle",
@@ -65,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "storeappng:build:production"
+              "browserTarget": "AngularAdAPI:build:production"
             },
             "development": {
-              "buildTarget": "storeappng:build:development"
+              "browserTarget": "AngularAdAPI:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,16 +76,17 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "aplicacion-angular:build"
+            "browserTarget": "AngularAdAPI:build"
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "src/test.ts",
-            "polyfills": "src/polyfills.ts",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
             "tsConfig": "tsconfig.spec.json",
-            "karmaConfig": "karma.conf.js",
             "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
@@ -99,8 +100,5 @@
         }
       }
     }
-  },
-  "cli": {
-    "analytics": false
   }
 }
