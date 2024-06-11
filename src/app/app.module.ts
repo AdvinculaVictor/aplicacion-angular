@@ -47,7 +47,7 @@ const isIE=window.navigator.userAgent.indexOf('MSIE')>-1
         {
           auth:{
             clientId:'8cdd5345-6e8b-49e7-a825-12117564ca6e',
-            redirectUri:'http://localhost:4200',
+            redirectUri:'https://black-pebble-00d6a4510.5.azurestaticapps.net/',
             authority:'https://login.microsoftonline.com/33444707-653e-4367-bb8b-1ed2685b6b7c'
           },
           cache:
