@@ -14,6 +14,7 @@ export class ApiService {
   private urlApi = 'https://api.escuelajs.co/api/v1/products';
   private urlApiAdProduct = 'https://advinculaproductapi.azurewebsites.net/Product';
   private urlApiAdCustomer = 'https://advinculacustomerapi.azurewebsites.net/Customer';
+  private urlApiAdOrder = 'https://advinculaorderapi.azurewebsites.net/Order';
   private urlApiAd:string = '';
 
   constructor(private httpClient: HttpClient) { }
@@ -31,8 +32,11 @@ export class ApiService {
       case 'clientes':
         this.urlApiAd = this.urlApiAdCustomer;
         break;
-      default:
-        break;
+        case 'ordenes':
+          this.urlApiAd = this.urlApiAdOrder;
+          break;
+        default:
+          break;
     }
     return this.httpClient.get<any>(this.urlApiAd);
   }
