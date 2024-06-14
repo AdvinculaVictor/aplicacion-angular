@@ -70,7 +70,8 @@ const isIE=window.navigator.userAgent.indexOf('MSIE')>-1
             ['https://graph.microsoft.com/v1.0/me',['user.Read']],
             ['localhost',['api://apiUri/api.scope']],
             ['https://advinculaproductapi.azurewebsites.net',['api://6c91fd07-2695-4303-a214-de6d178be33e/Products.Read','api://6c91fd07-2695-4303-a214-de6d178be33e/Products.Write']],
-            ['https://advinculacustomerapi.azurewebsites.net',['api://dc134f9f-2847-4724-a462-9fbcc0b6f9cf/Customers.Write','api://dc134f9f-2847-4724-a462-9fbcc0b6f9cf/Customers.Read']]
+            ['https://advinculacustomerapi.azurewebsites.net',['api://dc134f9f-2847-4724-a462-9fbcc0b6f9cf/Customers.Write','api://dc134f9f-2847-4724-a462-9fbcc0b6f9cf/Customers.Read']],
+            ['https://advinculaorderapi.azurewebsites.net',['api://ae20d75e-1c7c-409e-bf51-ab0071e2322e/Orders.Write','api://ae20d75e-1c7c-409e-bf51-ab0071e2322e/Orders.Read']]
           ]
         )
       }
