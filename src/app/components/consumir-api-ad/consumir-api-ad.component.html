@@ -27,4 +27,15 @@
     </li>
   </ul>
 </div>
-
+<div *ngIf="opcion=='ordenes'">
+  <ul  *ngFor="let item of data">
+    <li>
+      {{item.fechaPedido}}
+    </li>
+    <ul *ngFor="let det of item.pedidoDetalles">
+      <li>{{det.cantidad}}</li>
+      <li>{{det.producto.descripcion}}</li>
+      <li>{{det.producto.precio}}</li>
+    </ul>
+  </ul>
+</div>
