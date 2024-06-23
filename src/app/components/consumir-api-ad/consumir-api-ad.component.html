@@ -1,18 +1,18 @@
 <h2>Registros obtenidos desde la API con Active Directory</h2>
 <hr>
-
-<select style="vertical-align: middle"
+<span style="vertical-align: middle; padding-left: 30px;">
+<select
     #mySelect
     (change)='cambiar(mySelect.value)' >
    <option
    *ngFor='let option of opciones'
    [value]="option">{{option}}</option>
 </select>
-
-<div class="spinner-border center text-primary" role="status" *ngIf="loader">
-
-</div>
-
+</span>
+<span *ngIf="loader" style="padding-left: 50px;">
+<div class="spinner-grow text-primary" role="status" ></div>
+<div class="spinner-grow text-principal" role="status"></div>
+</span>
 <hr>
 <div *ngIf="opcion=='productos'">
 <ul *ngFor="let item of data" >
