@@ -9,6 +9,7 @@ import { ApiService } from 'src/app/services/api.service';
 })
 export class ConsumirApiADComponent {
   public data: any[] = [];
+  public loader: boolean = true;
   public opciones:string[]=['productos','clientes','ordenes'];
   public opcion:string= this.opciones[0]
 
@@ -22,10 +23,12 @@ export class ConsumirApiADComponent {
     this.apiService.getDataAD(this.opcion).subscribe(data => {
       this.data = data;
       console.log(this.data);
+      this.loader=false;
     })
   }
 
   cambiar(value:string){
+    this.loader = true;
     this.opcion = value;
     console.log(value);
     this.llenarDatos();
